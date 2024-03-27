@@ -1,3 +1,8 @@
 header {
   text-align: center;
 }
+.card {
+  border-color: red;
+  border-style: solid;
+  width: 250px;
+}
