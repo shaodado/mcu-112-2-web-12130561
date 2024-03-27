@@ -1,8 +1,40 @@
 header {
   text-align: center;
 }
+tr {
+  text-align: center;
+}
 .card {
-  border-color: red;
-  border-style: solid;
+  border: solid 1px #999;
+  border-radius: 8px;
   width: 250px;
+}
+
+input[type="text"] {
+  width: 200px;
+  height: 25px;
+}
+
+th,
+td {
+  height: 30px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td.id {
+  text-align: center;
+  width: 120px;
+}
+
+td.company {
+  text-align: center;
+  width: 150px;
+}
+
+td.price {
+  text-align: right;
+  width: 100px;
 }
