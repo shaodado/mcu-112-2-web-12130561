@@ -7,6 +7,10 @@ header {
   text-align: center;
 }
 
+section.body {
+  margin: 0 auto;
+  width: 80%;
+}
 nav {
   margin-bottom: 10px;
 }
