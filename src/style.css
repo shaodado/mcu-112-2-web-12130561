@@ -5,11 +5,12 @@ body {
 
 header {
   text-align: center;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 section.body {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
 }
 nav {
   margin-bottom: 10px;
@@ -36,6 +37,10 @@ table {
   margin: 10px 0;
 }
 
+table.th {
+  background-color: #777;
+  color: white;
+}
 th,
 td {
   height: 30px;
