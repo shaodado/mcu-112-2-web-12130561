@@ -1,0 +1,16 @@
+{
+  "name": "mcu-112-2-web-12130561",
+  "version": "1.0.0",
+  "description": "- 利用 HTML 建立如下圖所示的網站",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
+  }
+}
