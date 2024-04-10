@@ -8,5 +8,5 @@ console.log(productNg);
 const isShow = true;
 console.log("Is Show", isShow);
 
-let createDate = undefined;
+let createDate = new Date();
 console.log("Create Date = ", createDate);
