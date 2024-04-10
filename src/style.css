@@ -22,6 +22,8 @@ a:hover,
 a:active {
   color: black;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
 ul {
   padding-left: 0;
@@ -39,7 +41,15 @@ tr {
   text-align: center;
 }
 
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .card {
+  padding: 10px;
   border: solid 1px #999;
   border-radius: 8px;
   width: 250px;
