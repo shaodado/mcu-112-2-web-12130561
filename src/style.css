@@ -16,6 +16,18 @@ nav {
   margin-bottom: 10px;
 }
 
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+ul > li {
+  border: solid 1px #ccc;
+  padding: 8px;
+  width: 80px;
+  display: inline-block;
+  text-align: center;
+}
+
 tr {
   text-align: center;
 }
