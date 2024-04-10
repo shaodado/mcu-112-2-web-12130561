@@ -16,6 +16,13 @@ nav {
   margin-bottom: 10px;
 }
 
+a,
+a:focus,
+a:hover,
+a:active {
+  color: black;
+  list-style: none;
+}
 ul {
   padding-left: 0;
   list-style: none;
@@ -62,6 +69,9 @@ tr > td {
   padding: 8px;
 }
 
+tr:hover {
+  background-color: yellow;
+}
 tr > td.id {
   text-align: center;
   width: 120px;
