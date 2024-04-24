@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  border: solid 1px #999;
+  padding: 10px;
+  border-radius: 8px;
+  width: 300px;
+  flex-direction: column;
+  gap: 10px;
+}
+div.content,
+div.company,
+div.button {
+  display: flex;
+  justify-content: space-between;
+}
+div.button button {
+  padding: 10px, 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+button.edit {
+  background-color: #007bff;
+  color: white;
+}
+button.remove {
+  background-color: #ba1a1a;
+  color: white;
+}
