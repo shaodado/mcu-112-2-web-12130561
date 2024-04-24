@@ -9,5 +9,9 @@ import { ProductCardComponent } from './product-card/product-card.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'shopping-cart';
+  productName = '書籍 B';
+  authors = '作者甲、作者乙、作者丙';
+  company = '博碩文件';
+  isShow = true;
+  imgUrl = 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img';
 }
