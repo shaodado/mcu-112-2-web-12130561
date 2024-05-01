@@ -52,4 +52,12 @@ export class AppComponent {
       price: 10000,
     }),
   ];
+
+  onSetNoData(): void {
+    this.products = [];
+  }
+
+  onSetHasData(): void {
+    this.products = [];
+  }
 }

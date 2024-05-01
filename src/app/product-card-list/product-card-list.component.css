@@ -10,3 +10,11 @@
 .product-card {
   flex-basis: calc(20%-40px);
 }
+div.data-empty {
+  padding: 15px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-style: 20px;
+  font-weight: 200;
+  text-align: center;
+}
