@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from '../model/product';
 import { ProductCardComponent } from '../product-card/product-card.component';
 
@@ -10,14 +10,6 @@ import { ProductCardComponent } from '../product-card/product-card.component';
   styleUrl: './product-card-list.component.css',
 })
 export class ProductCardListComponent {
-  product = new Product({
-    id: 1,
-    Name: '書籍 A',
-    authors: '作者甲、作者乙、作者丙',
-    company: '博碩文件',
-    isShow: true,
-    imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text:img',
-    createDate: new Date(),
-    price: 10000,
-  });
+  @Input({ required: true })
+  products!: Product[];
 }

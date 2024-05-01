@@ -25,7 +25,7 @@
     },
     {
       "files": "*.html",
-      "options": { "parser": "html" }
+      "options": { "parser": "angular" }
     }
   ]
 }
