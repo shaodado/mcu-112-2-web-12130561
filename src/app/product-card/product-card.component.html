@@ -1,11 +1,17 @@
 <img [src]="imgUrl" />
 <div class="content">
-  <strong [class.notShow]="!isShow"> {{id}} .{{productName}} </strong>
-  <span>{{createDate | date:'yyyy-MM-dd'}}</span>
+  <strong [class.notShow]="!isShow"> {{ id }} .{{ productName }} </strong>
+  <span>{{ createDate | date : 'yyyy-MM-dd' }}</span>
 </div>
-<div>{{authors}}</div>
+<div>
+  @for (author of authors; track authors) {
+  <span>{{ author }}</span>
+  @if (!$last) {
+  <span>、</span>
+  } }
+</div>
 <div class="company">
-  <span>{{company}}</span>
+  <span>{{ company }}</span>
   <span>{{ price | currency }}</span>
 </div>
 <div class="button">
