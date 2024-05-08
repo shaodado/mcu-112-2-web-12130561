@@ -5,10 +5,11 @@
     [productName]="product.Name"
     [authors]="product.authors"
     [company]="product.company"
-    [(isShow)]="product.isShow"
+    [isShow]="product.isShow"
     [imgUrl]="product.imgUrl"
     [createDate]="product.createDate"
     [price]="product.price"
+    (view)="view.emit(product)"
   ></app-product-card>
   } @empty {
   <div class="data-empty">無產品資料</div>

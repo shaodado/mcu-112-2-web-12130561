@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../model/product';
 import { ProductCardComponent } from '../product-card/product-card.component';
 
@@ -12,4 +12,6 @@ import { ProductCardComponent } from '../product-card/product-card.component';
 export class ProductCardListComponent {
   @Input({ required: true })
   products!: Product[];
+
+  @Output() view = new EventEmitter<Product>();
 }
