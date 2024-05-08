@@ -1,7 +1,9 @@
 :host {
-  display: block;
+  display: flex;
   margin: 0;
   padding: 2px 20px;
   color: #005cbb;
   background-color: #d7e3ff;
+  justify-content: space-between;
+  align-items: center;
 }
