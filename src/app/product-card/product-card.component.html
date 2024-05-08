@@ -17,7 +17,7 @@
 <div class="button">
   <button type="button" (click)="view.emit()">檢視</button>
   <span>
-    <button type="button" class="edit">編輯</button>
-    <button type="button" class="remove">刪除</button>
+    <button type="button" class="edit" (click)="edit.emit()">編輯</button>
+    <button type="button" class="remove" (click)="remove.emit()">刪除</button>
   </span>
 </div>
