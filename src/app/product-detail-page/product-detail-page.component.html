@@ -1,1 +1,29 @@
-<p>product-detail-page works!</p>
+<img [src]="product.imgUrl" />
+<section>
+  <h2>{{ product.Name }}</h2>
+  <div>
+    <strong>作者</strong>
+    <span>
+      @for (author of product.authors; track author) {
+      <span>{{ author }}</span>
+      @if (!$last) {
+      <span>、</span>
+      } }
+    </span>
+  </div>
+  <div>
+    <strong>公司</strong>
+    <span>{{ product.company }}</span>
+  </div>
+  <div>
+    <strong>價格</strong>
+    <span>{{ product.price | currency }}</span>
+  </div>
+  <div class="button">
+    <button type="button" (click)="onBack()">返回</button>
+    <span>
+      <button type="button" class="edit" (click)="onEdit()">編輯</button>
+      <button type="button" class="remove">刪除</button>
+    </span>
+  </div>
+</section>

@@ -1,3 +1,49 @@
 :host {
   display: block;
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+img {
+  flex: 0 0 300px;
+}
+section {
+  padding: 10px 20px;
+  flex: 0 0 450px;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+}
+
+section > div {
+  margin-bottom: 20px;
+}
+
+section > div > strong {
+  display: inline-block;
+  font-size: 18px;
+  width: 120px;
+  text-align: centers;
+}
+section > div > span {
+  display: inline-block;
+  font-size: 18px;
+}
+div.button {
+  display: flex;
+  justify-content: space-between;
+}
+div.button button {
+  padding: 10px, 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+button.edit {
+  background-color: #007bff;
+  color: white;
+}
+button.remove {
+  background-color: #ba1a1a;
+  color: white;
 }
