@@ -1,4 +1,9 @@
 <div class="toolbar">
   <button type="button" (click)="onAdd()">新增</button>
 </div>
-<app-product-card-list [products]="products" (edit)="onEdit($event)" (view)="onView($event)"></app-product-card-list>
+<app-product-card-list
+  [products]="products"
+  (edit)="onEdit($event)"
+  (remove)="onRemove($event)"
+  (view)="onView($event)"
+></app-product-card-list>
