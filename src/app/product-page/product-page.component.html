@@ -2,7 +2,7 @@
   <button type="button" (click)="onAdd()">新增</button>
 </div>
 <app-product-card-list
-  [products]="products"
+  [products]="(products$ | async) || []"
   (edit)="onEdit($event)"
   (remove)="onRemove($event)"
   (view)="onView($event)"
