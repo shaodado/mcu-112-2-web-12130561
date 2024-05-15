@@ -5,7 +5,7 @@ import { Product } from '../model/product';
   providedIn: 'root',
 })
 export class ProductService {
-  private_data = [
+  private _data = [
     new Product({
       id: 1,
       Name: '書籍 A',
@@ -49,6 +49,11 @@ export class ProductService {
   ];
 
   getList(): Product[] {
-    return this.private_data;
+    return this._data;
+  }
+
+  add(product: Product): void {
+    const id = this._data.length === 0 ? 1 : Math.max(...this._data.map(({ id }) => id)) + 1;
+    this._data.push(new Product({ ...product, id }));
   }
 }

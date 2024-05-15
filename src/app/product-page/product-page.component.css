@@ -2,3 +2,16 @@
   display: block;
   padding: 10px;
 }
+
+.toolbar {
+  margin-bottom: 20px;
+}
+
+div.button button {
+  padding: 10px, 20px;
+  border: solid 1px #007bff;
+  color: 007bff;
+  background-color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
