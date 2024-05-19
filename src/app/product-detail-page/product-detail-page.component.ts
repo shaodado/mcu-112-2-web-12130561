@@ -1,8 +1,8 @@
-import { ProductService } from './../services/product.service';
 import { CurrencyPipe } from '@angular/common';
-import { Component, Input, OnInit, inject, input, numberAttribute } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../model/product';
+import { ProductService } from './../services/product.service';
 
 @Component({
   selector: 'app-product-detail-page',
@@ -11,21 +11,17 @@ import { Product } from '../model/product';
   templateUrl: './product-detail-page.component.html',
   styleUrl: './product-detail-page.component.css',
 })
-export class ProductDetailPageComponent implements OnInit{
-  @Input({transform: numberAttribute})
-  id!: number;
-  product!:Product;
+export class ProductDetailPageComponent {
+  @Input()
+  product!: Product;
   private router = inject(Router);
-  private ProductService=inject (ProductService);
+  private ProductService = inject(ProductService);
 
-  ngOnInit(): void {
-    this.ProductService.getById(this.id).subscribe(product => (this.product = product));
-  }
   onEdit(): void {
     this.router.navigate(['product', 'form', this.product.id]);
   }
   onRemove(): void {
-    this.ProductService.remove(this.product.id).subscribe(()=>this.router.navigate(['products']));
+    this.ProductService.remove(this.product.id).subscribe(() => this.router.navigate(['products']));
   }
   onBack(): void {
     this.router.navigate(['products']);
