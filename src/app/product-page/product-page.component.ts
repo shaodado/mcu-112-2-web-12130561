@@ -27,7 +27,7 @@ export class ProductPageComponent {
 
   onAdd(): void {
     const product = new Product({
-      Name: '書籍 zz',
+      name: '書籍 zz',
       authors: ['作者甲', '作者乙', '作者丙'],
       company: '博碩文件',
       isShow: true,
