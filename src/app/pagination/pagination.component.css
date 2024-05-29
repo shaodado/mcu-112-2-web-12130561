@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+button {
+  padding: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #005cbb;
+  border: solid 1px #005cbb;
+}
+
+button.active {
+  color: white;
+  background-color: #005cbb;
+  border-color: #005cbb;
+}

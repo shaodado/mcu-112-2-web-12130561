@@ -1,0 +1,3 @@
+@for (i of range; track i) {
+<button type="button" [class.active]="pageIndex === i" (click)="pageIndexChange.emit(i)">{{ i }}</button>
+}
