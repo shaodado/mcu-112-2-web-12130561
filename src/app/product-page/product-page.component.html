@@ -1,5 +1,9 @@
 <div class="toolbar">
   <button type="button" (click)="onAdd()">新增</button>
+  <span>
+    <input type="text" placeholder="產品名稱" />
+    <button type="button">查詢</button>
+  </span>
 </div>
 <app-product-card-list
   [products]="(products$ | async) || []"
