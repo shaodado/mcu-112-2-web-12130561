@@ -1,10 +1,11 @@
 <div class="toolbar">
   <button type="button" (click)="onAdd()">新增</button>
   <span>
-    <input type="text" placeholder="產品名稱" />
+    <input type="text" placeholder="產品名稱" [formControl]="formControl" />
     <button type="button">查詢</button>
   </span>
 </div>
+<pre>{{ formControl.value | json }}</pre>
 <app-product-card-list
   [products]="(products$ | async) || []"
   (edit)="onEdit($event)"

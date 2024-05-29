@@ -1,5 +1,5 @@
 # Get List
-GET http://[::]:3000/products?書籍A HTTP/1.1
+GET http://[::]:3000/products?_page=1&_limit=5 HTTP/1.1
 
 ###
 #Get By Id
