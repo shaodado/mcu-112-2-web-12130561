@@ -16,7 +16,6 @@ export class PaginationComponent implements OnChanges {
 
   @Input({ transform: numberAttribute })
   pageIndex = 1;
-
   @Output()
   pageIndexChange = new EventEmitter<number>();
 

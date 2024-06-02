@@ -19,13 +19,22 @@ export class ProductPageComponent {
 
   private ProductService = inject(ProductService);
 
+  protected pageSize = 0;
+
   private readonly refresh$ = new Subject<void>();
 
   protected readonly formControl = new FormControl<string | undefined>(undefined);
 
+  pageIndex = 1;
+
   readonly products$ = this.refresh$.pipe(
     startWith(undefined),
     switchMap(() => this.ProductService.getList(undefined, 1, 5))
+  );
+
+  readonly totalCount$ = this.refresh$.pipe(
+    startWith(undefined),
+    switchMap(() => this.ProductService.getCount())
   );
 
   onAdd(): void {
