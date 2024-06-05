@@ -1,7 +1,7 @@
 import { JsonPipe } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Data } from '@angular/router';
-import { map, tap } from 'rxjs';
+import { map } from 'rxjs';
 import { Product } from '../model/product';
 
 @Component({
@@ -17,11 +17,6 @@ export class ProductFormPageComponent implements OnInit {
   product!: Product;
 
   ngOnInit(): void {
-    this.route.data
-      .pipe(
-        tap((data) => console.log(data)),
-        map(({ product }: Data) => product)
-      )
-      .subscribe((product) => (this.product = product));
+    this.route.data.pipe(map(({ product }: Data) => product)).subscribe((product) => (this.product = product));
   }
 }
