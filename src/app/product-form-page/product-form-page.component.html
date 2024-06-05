@@ -9,18 +9,22 @@
   <div class="form-item">
     <div class="form-column">
       <label>作者</label>
-      <button type="button">新增</button>
+      <button type="button" (click)="onAddAuthors()">新增</button>
     </div>
   </div>
-  <div class="form-item">
-    <div class="form-column">
-      <div>
-        <button type="button">刪除</button>
+  <ng-container formArrayName="authors">
+    @for (control of authors.controls; track $index) {
+    <div class="form-item">
+      <div class="form-column">
+        <div>
+          <button type="button" (click)="authors.removeAt($index)">刪除</button>
+        </div>
+        <input type="text" [formControl]="control" />
       </div>
-      <input type="text" />
+      <div class="error-message">請輸入作者</div>
     </div>
-    <div class="error-message">請輸入作者</div>
-  </div>
+    }
+  </ng-container>
   <div class="form-item">
     <div class="form-column">
       <label>出版社</label>
