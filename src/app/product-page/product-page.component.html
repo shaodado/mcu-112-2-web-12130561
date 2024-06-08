@@ -5,7 +5,6 @@
     <button type="button" (click)="condition = formControl.value">查詢</button>
   </span>
 </div>
-<pre>{{ formControl.value | json }}</pre>
 <app-product-card-list
   [products]="(products$ | async) || []"
   [totalCount]="(totalCount$ | async) || 0"

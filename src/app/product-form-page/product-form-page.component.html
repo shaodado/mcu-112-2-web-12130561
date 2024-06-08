@@ -4,7 +4,9 @@
       <label>名稱</label>
       <input type="text" formControlName="name" />
     </div>
+    @if (name.hasError('required')) {
     <div class="error-message">請輸入產品名稱</div>
+    }
   </div>
   <div class="form-item">
     <div class="form-column">
@@ -21,7 +23,9 @@
         </div>
         <input type="text" [formControl]="control" />
       </div>
+      @if (control.hasError('required')) {
       <div class="error-message">請輸入作者</div>
+      }
     </div>
     }
   </ng-container>
@@ -30,18 +34,24 @@
       <label>出版社</label>
       <input type="text" formControlName="company" />
     </div>
+    @if (company.hasError('required')) {
     <div class="error-message">請輸入出版社</div>
+    }
   </div>
   <div class="form-item">
     <div class="form-column">
       <label>單價</label>
       <input type="text" formControlName="price" />
     </div>
+    @if (price.hasError('required')) {
     <div class="error-message">請輸入單價</div>
+    }@if (price.hasError('pattern')) {
+    <div class="error-message">單價必須為數字</div>
+    }
   </div>
   <div class="form-action">
     <button type="button">取消</button>
-    <button type="button" class="save">儲存</button>
+    <button type="button" [disabled]="form.invalid" class="save">儲存</button>
   </div>
   <pre>{{ form.value | json }}</pre>
 </div>
