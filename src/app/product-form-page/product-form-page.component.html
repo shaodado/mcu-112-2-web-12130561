@@ -50,8 +50,7 @@
     }
   </div>
   <div class="form-action">
-    <button type="button">取消</button>
-    <button type="button" [disabled]="form.invalid" class="save">儲存</button>
+    <button type="button" (click)="onCancel()">取消</button>
+    <button type="button" [disabled]="form.invalid" class="save" (click)="onSave()">儲存</button>
   </div>
-  <pre>{{ form.value | json }}</pre>
 </div>

@@ -1,4 +1,7 @@
 export class Product {
+  subscribe(arg0: () => Promise<boolean>): any {
+    throw new Error('Method not implemented.');
+  }
   constructor(initData?: Partial<Product>) {
     Object.assign(this, initData);
     this.createDate = new Date();
