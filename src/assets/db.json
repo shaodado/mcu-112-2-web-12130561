@@ -99,14 +99,29 @@
       "id": 7
     },
     {
-      "name": "dfsf",
-      "authors": [],
-      "company": "sfadas",
+      "name": "dsfad",
+      "authors": [
+        null,
+        null
+      ],
+      "company": "fdasfsfad",
       "isShow": false,
       "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
-      "createDate": "2024-06-08T16:04:43.234Z",
-      "price": "1342",
+      "createDate": "2024-06-12T09:07:23.980Z",
+      "price": "1231",
       "id": 8
+    },
+    {
+      "name": "sdfaf",
+      "authors": [
+        null
+      ],
+      "company": "dsafdf",
+      "isShow": false,
+      "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
+      "createDate": "2024-06-12T09:07:39.680Z",
+      "price": "31213",
+      "id": 9
     }
   ]
 }

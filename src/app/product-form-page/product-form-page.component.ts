@@ -18,7 +18,7 @@ export class ProductFormPageComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
 
   form = new FormGroup<IProductForm>({
-    id: new FormControl<string | null>(null),
+    id: new FormControl<number | null>(null),
     name: new FormControl<string | null>(null, { validators: [Validators.required] }),
     authors: new FormArray<FormControl<string | null>>([]),
     company: new FormControl<string | null>(null, { validators: [Validators.required] }),
@@ -26,7 +26,10 @@ export class ProductFormPageComponent implements OnInit {
     price: new FormControl<number | null>(null, { validators: [Validators.required] }),
   });
   author: any;
-  productService: any;
+
+  get id(): FormControl<number | null> {
+    return this.form.get('id') as FormControl<number | null>;
+  }
 
   get name(): FormControl<string | null> {
     return this.form.get('name') as FormControl<string | null>;
@@ -48,7 +51,7 @@ export class ProductFormPageComponent implements OnInit {
     return this.form.get('authors') as FormArray<FormControl<string | null>>;
   }
   private readonly router = inject(Router);
-  private readonly ProductService = inject(ProductService);
+  private readonly productService = inject(ProductService);
 
   product!: Product;
 
@@ -63,6 +66,7 @@ export class ProductFormPageComponent implements OnInit {
 
   onSave(): void {
     const formData = new Product({
+      id: this.id.value ?? undefined,
       name: this.name.value!,
       authors: this.authors.value.map(() => this.author!),
       company: this.company.value!,
@@ -71,7 +75,8 @@ export class ProductFormPageComponent implements OnInit {
       createDate: new Date(),
       price: this.price.value!,
     });
-    this.ProductService.add(formData).subscribe(() => this.router.navigate(['products']));
+    const action$ = this.id.value ? this.productService.update(formData) : this.productService.add(formData);
+    action$.subscribe(() => this.router.navigate(['products']));
   }
 
   onCancel(): void {

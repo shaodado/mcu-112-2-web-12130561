@@ -8,7 +8,8 @@
   margin-bottom: 20px;
   justify-content: space-between;
 }
-input[type='text'] {
+
+text {
   margin-right: 10px;
   padding: 5px;
   width: 300px;
@@ -18,7 +19,7 @@ input[type='text'] {
   border-radius: 10px;
 }
 
-div.button button {
+button {
   padding: 10px, 20px;
   border: solid 1px #007bff;
   color: #007bff;

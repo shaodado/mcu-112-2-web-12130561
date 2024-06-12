@@ -1,7 +1,7 @@
 import { FormArray, FormControl } from '@angular/forms';
 
 export interface IProductForm {
-  id: FormControl<string | null>;
+  id: FormControl<number | null>;
   name: FormControl<string | null>;
   authors: FormArray<FormControl<string | null>>;
   company: FormControl<string | null>;
